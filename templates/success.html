@@ -2,14 +2,17 @@
 {% block title %}Success{% endblock %}
 
 {% block content %}
-    
+    {% if value==1 %}
         <section class="hero is-info">
             <div class="hero-body">
                 <h1 class="has-text-centered title">WELCOME!</h1>
             </div>
         </section>
-    
-    <!-- {% if name1 %}
-    {% else %}
-    {% endif %} -->
+    {% elif value==2 %}
+        <section class="hero is-danger">
+            <div class="hero-body">
+                <h1 class="has-text-centered title">TRY AGAIN</h1>
+            </div>
+        </section>
+    {% endif %}
 {% endblock %}
