@@ -9,9 +9,10 @@
     {% endblock %}
 </head>
 <body>
-    <div id="content">{% block content %}
+    
         <div class="columns is-mobile is-centered" style="margin-top: 150px;">
             <div class="column is-half-desktop is-half-tablet">
+                <div id="content">{% block content %}
                 <section class="hero is-light">
                     <div class="hero-body field">
                         <form action="/loginForm" method="post">
@@ -38,8 +39,9 @@
                 
                     </div>
                 </section>
+                {% endblock %}</div>
             </div>
         </div>  
-    {% endblock %}</div>
+    
 </body>
 </html>
