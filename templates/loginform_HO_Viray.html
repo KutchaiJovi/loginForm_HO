@@ -9,6 +9,7 @@
     {% endblock %}
 </head>
 <body>
+    <div id="content">{% block content %}
         <div class="columns is-mobile is-centered" style="margin-top: 150px;">
             <div class="column is-half-desktop is-half-tablet">
                 <section class="hero is-light">
@@ -26,10 +27,19 @@
                                 <button class="button is-dark">Submit</button>
                             </div>
                         </form><br>
-                        <div id="content">{% block content %}{% endblock %}</div>
+                        
+                            {% if value==2 %}
+                                <section class="hero is-danger">
+                                    <div class="hero-body">
+                                        <h1 class="has-text-centered title">TRY AGAIN</h1>
+                                    </div>
+                                </section>
+                            {% endif %}
+                
                     </div>
                 </section>
             </div>
-        </div>   
+        </div>  
+    {% endblock %}</div>
 </body>
 </html>

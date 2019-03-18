@@ -3,16 +3,19 @@
 
 {% block content %}
     {% if value==1 %}
-        <section class="hero is-info">
-            <div class="hero-body">
-                <h1 class="has-text-centered title">WELCOME!</h1>
+    <div class="columns is-mobile is-centered" style="margin-top: 150px;">
+            <div class="column is-half-desktop is-half-tablet">
+                <section class="hero is-info">
+                    <div class="hero-body field">
+                        <h1 class="has-text-centered title">WELCOME!</h1>
+                    </div>
+                </section><br>
+                <form action="/loginForm" method="GET">
+                    <div class="control has-text-centered">  
+                        <button class="button is-light">LOGOUT</button>
+                    </div>
+                </form>
             </div>
-        </section>
-    {% elif value==2 %}
-        <section class="hero is-danger">
-            <div class="hero-body">
-                <h1 class="has-text-centered title">TRY AGAIN</h1>
-            </div>
-        </section>
+        </div>
     {% endif %}
 {% endblock %}
