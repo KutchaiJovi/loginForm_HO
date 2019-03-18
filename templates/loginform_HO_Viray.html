@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %} Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    {% endblock %}
+</head>
+<body>
+        <div class="columns is-mobile is-centered" style="margin-top: 150px;">
+            <div class="column is-half-desktop is-half-tablet">
+                <section class="hero is-light">
+                    <div class="hero-body field">
+                        <form action="/loginForm" method="post">
+                            <label class="label">Input details</label>
+                                <div class="control">
+                                    <input class="input is-medium" type="email" name="email"placeholder="Email Adress">
+                                </div>
+                            <p class="help">Please input valid email address.</p>
+                            <div class="control">
+                                <input class="input is-medium" type="password" name="password" placeholder="Password">
+                            </div><br>
+                            <div class="control">  
+                                <button class="button is-dark">Submit</button>
+                            </div>
+                        </form><br>
+                        <div id="content">{% block content %}{% endblock %}</div>
+                    </div>
+                </section>
+            </div>
+        </div>   
+</body>
+</html>
